@@ -1,20 +1,19 @@
+import os
 import random
-import time
+import re
 
 import requests
-import os
 import urllib3
 from bs4 import BeautifulSoup
-import re
 
 # 忽略https的警告
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 page_params = ''
-url = f'https://pic.netbian.com/4kmeinv/index{page_params}.html'
+url = f'https://pic.netbian.com/4kdongman/index{page_params}.html'
 headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36',
-    "Cookie": "zkhanecookieclassrecord=%2C54%2C; PHPSESSID=j8isivf86mtuljhr4soi3puob7; zkhanreturnurl=https%3A%2F%2Fpic.netbian.com%2Fe%2Fmember%2Fbuygroup%2F; zkhanmlusername=qq550090172136; zkhanmluserid=7677176; zkhanmlgroupid=1; zkhanmlrnd=goHik862f7OmB8QckQDf; zkhanmlauth=be2cbf2604f4b7f23ae0b4f12f832741"
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+    "Cookie": "zkhanreturnurl=https%3A%2F%2Fpic.netbian.com%2Fe%2Fmember%2Fbuygroup%2F; zkhanmlusername=qq550090172136; zkhanmluserid=7677176; zkhanmlgroupid=1; zkhanmlrnd=goHik862f7OmB8QckQDf; zkhanmlauth=be2cbf2604f4b7f23ae0b4f12f832741; zkhanecookieclassrecord=%2C54%2C53%2C55%2C66%2C"
 }
 
 # 创建一个文件夹来存储图片

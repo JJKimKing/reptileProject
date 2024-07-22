@@ -10,7 +10,6 @@ headers = {
 
 result = []
 
-
 def getAllContent(tags):
     info = []
     for p in tags:
