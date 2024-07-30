@@ -2,6 +2,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+user_name = 'xxxx'
+password = '<PASSWORD>'
+
 if __name__ == '__main__':
     # 设置一些配置
     options = webdriver.ChromeOptions()
@@ -12,7 +15,7 @@ if __name__ == '__main__':
     # 禁用gpu
     options.add_argument('--disable-gpu')
 
-    options.chrome_driver_path = './chromedriver'
+    # options.chrome_driver_path = './chromedriver'
     driver = webdriver.Chrome(options=options)
     driver.get('https://kyfw.12306.cn/otn/resources/login.html')
 
@@ -25,9 +28,9 @@ if __name__ == '__main__':
     })
 
     login_user_name = driver.find_element(by=By.ID, value='J-userName')
-    login_user_name.send_keys('xxxxx')
+    login_user_name.send_keys(user_name)
     login_password = driver.find_element(by=By.ID, value='J-password')
-    login_password.send_keys('xxxxxx')
+    login_password.send_keys(password)
     # 查询登陆接口实现登陆
     login_button = driver.find_element(by=By.ID, value='J-login')
     login_button.click()
